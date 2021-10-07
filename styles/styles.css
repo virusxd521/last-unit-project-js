@@ -4,9 +4,10 @@ html{
 }
 
 body{
-    min-height: 100vh;
-    
+    min-height: 100vh;    
 }
+
+
 
 #exchange-names-article{
     background-color: white;
@@ -15,12 +16,18 @@ body{
     max-height: 30rem;
     overflow-y: scroll;
     padding-top: 3px;
-    
-
+    width:100%;
 }
 
+
+
+
+
+
 #exchange-names-article a,
-#exchange-names-article p{
+#exchange-names-article p,
+.learning-reasources a,
+.my-media a{
     text-decoration: none;
 }
 
@@ -39,47 +46,6 @@ body{
 .paragraph-exchange:hover{
     transform: scale(1.1);
 }
-
-
-/* Nav bar logo */
-/* .name-logo{
-    font-family: 'Dancing Script', cursive;
-} */
-
-/* .intro-section{
-    background-image: url('../images/background1.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    box-shadow: inset 0 0 0 100vw rgba(70, 70, 70, 0.6);
-}
-
-.intro-header{
-    padding: 15px 0;
-    width: 100%;
-    background-color: rgb(63, 119, 165);
-    border-bottom: rgb(90, 72, 68) 1px solid;
-    display: inline-block;
-    box-shadow:steelblue -5px -5px 5px 5px;
-    transform: skew(0deg, -20deg) scaleY(1.337);
-    font-family: 'Are You Serious', cursive;
-    text-align: center;
-    text-shadow: 2px 2px rgb(18, 46, 122);
-    font-size: 60px;
-}
-
-.intro-text{
-    background-color: rgba(101, 64, 224, .3);
-    box-shadow:steelblue -5px 3px 5px 5px;
-    transform: skew(45deg, -20deg);
-    margin-top: 10px;
-    margin-left: 41px;
-    width: 100%;
-    font-size: 22px;
-    font-family: 'Dancing Script', cursive;
-}
-
 
 /* The main section */
 .intro-data-section{
@@ -112,9 +78,19 @@ body{
 
 
 #crypto-form{
-    width: 40%;
+    width: 80%;
     margin:auto;
+    flex-direction: column;
+}
 
+#submit-crypto{
+    width: 60%;
+    margin: auto;
+}
+
+.form-control{
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 
@@ -122,18 +98,129 @@ body{
     /* box-shadow: inset 10px 10px 10px #c01010; */
     /* filter: ; */
     /* filter: grayscale(100%)  */
-    filter: blur(5px); 
-    height: 600px;
+    filter: blur(3px); 
+    height: 250px;
 }
 
 .carousel-images{
     width: 80%;
-    
     box-shadow: 15px 15px 135px rgb(143, 143, 143);
 }
 
+.contact-me{
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 90%;    
+    background: linear-gradient(.25turn, #e2c000, #e5ff00, #e2c000);
+    box-shadow: 5px 5px 35px rgb(121, 121, 121);
+    border: solid 2px black;
+    overflow: hidden;
+    grid-area: form;
+  
+}
+
+.field-form * {
+    width: 60%;
+}
+
+/* make text area not resizeable */
+.textarea1{
+    resize: none;
+    width: 80%;
+    height: 170px;
+    margin-bottom: 15px;
+}
+
+
 footer{
-    background-color: rgba(121, 99, 2, 0.9);
-    margin-bottom: -50px;    
-    box-shadow: 15px 15px 25px rgb(161, 40, 40);
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: 80vh, 70vh, 70vh;
+    grid-template-areas: "form "
+                         "social"
+                         "resources";
+    font-family:'Comic Sans', cursive;
+    box-shadow: 5px 5px 15px rgb(201, 201, 201);
+    margin-bottom: -50px;
+    margin-top: 200px;
+    border-top: 1px solid rgba(14, 14, 14, .2);
+    padding-bottom: 20px;
+}
+
+
+#legend-of-contact{
+    margin-top: -16px;
+    margin-left: -8px;
+    background-color: white;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    transform: skew(-15deg);
+    text-indent: 10px;
+    width: 80%;   
+}
+
+.contact-me * :not(#legend-of-contact),
+.textarea1,
+input[type="submit"]{
+    margin-left: 50px;
+    border-radius: 15px;
+}
+
+.textarea1,
+.contact-me input{
+    border: 2px solid black;
+    transition: ease-in-out .4s ;
+    padding: 5px 20px;
+}
+
+.textarea1:hover,
+.contact-me input:hover{
+    border: 2px solid rgb(192, 206, 6);
+    
+}
+
+.learning-reasources{
+    background-image:radial-gradient(circle, palegreen, yellowgreen);
+    margin-top: 15px;
+    box-shadow: 5px 5px 35px rgb(121, 121, 121);
+    border: solid 2px black;
+    width: 90%;
+    grid-area: resources;
+    overflow: hidden;
+    margin-left: 20px;
+    
+}
+
+
+.my-media{
+    background-image:radial-gradient(circle, lightblue, deepskyblue);
+    grid-area: social;
+    width: 90%;
+    box-shadow: 5px 5px 35px rgb(121, 121, 121);
+    border: solid 2px black;
+    overflow: hidden;
+    max-height: 400px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+
+.footer-heading{
+    background-color: white;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    width: 90%;
+    transform: skew(-15deg);
+    text-indent: 20px;
+    margin-left: -6px;
+}
+
+.learning-reasources a,
+.my-media a{
+    color: rgb(0, 8, 46);
+}
+
+.learning-reasources a:hover,
+.my-media a:hover {
+    cursor: pointer;
 }

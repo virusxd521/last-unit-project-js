@@ -1,6 +1,7 @@
 const crypto_search_bar = document.querySelector("#crypto-form");
 const names_of_exchanges_box = document.querySelector("#exchange-names-article");
 const the_chrt_place = document.querySelector("#the-chrt-place");
+const sending_email_submition = document.querySelector("#sending-portfolio");
 const top_hundred_coins = {
     BTC: "btc-bitcoin",
     ETH: "eth-ethereum",
@@ -106,14 +107,12 @@ const top_hundred_coins = {
 
 window.addEventListener("load", event => {
     fetching_crypto_prices("https://api.coinpaprika.com/v1/tickers/btc-bitcoin", "BTC");
-    console.log("loaded");
 })
 
 crypto_search_bar.addEventListener("submit", event => {
     event.preventDefault();
     for(let i = 0 ; i < event.target.children.length; i++){
         if(event.target.children[i].tagName === "INPUT"){
-            console.log(event.target.children[i].value);
             for(const prop in top_hundred_coins){
                 if(event.target.children[i].value.toUpperCase() === prop){
                     if(window.myChart.style.display === "block"){
@@ -133,6 +132,8 @@ crypto_search_bar.addEventListener("submit", event => {
         }
         
     }
+
+    event.target[0].value = "";
 });
 
 const creating_list_exchanges = async the_names => {
@@ -155,7 +156,6 @@ const fetching_crypto_prices = async (url, token_name) => {
     
     const fetching_btc_data = await fetch(url)
     const btc_to_json = await fetching_btc_data.json();
-    // console.log(btc_to_json.quotes.USD);
     const only_quotes = await btc_to_json.quotes.USD;
     var ctx = document.getElementById('myChart');
     let myChart = new Chart(ctx, {
@@ -180,9 +180,38 @@ const fetching_crypto_prices = async (url, token_name) => {
                 y: {
                     beginAtZero: true
                 }
-            }
+            },
+            maintainAspectRatio: false,
+            responsive: true,
         }
 });
 }
 
 fetching_data_exchange("https://api.coinpaprika.com/v1/exchanges");
+
+
+
+
+// clients sending email to the developer to give review about the portfolio
+sending_email_submition.addEventListener('submit', event => {
+    event.preventDefault();
+    const sender = event.target[3].value;
+    const fullName = `${event.target[1].value} ${event.target[2].value}`;
+    const message_review = event.target[4].value
+
+    Email.send({
+        SecureToken : "2129ca48-4de6-42ec-98cb-c198d8c216a6",
+        To : 'virusxd521@gmail.com',
+        From : sender,
+        Subject : `${fullName} Reviewed Your Portfolio`,
+        Body : message_review
+    })
+
+    for(let i = 0; i <= 4; i++){
+        event.target[i].value = "";
+    }
+
+})
+
+
+"a5039c64-2392-4416-94d7-e53d35e0f6b0"
