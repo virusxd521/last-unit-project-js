@@ -8,7 +8,23 @@ body{
 }
 
 
+/* The form in the header  */
+#crypto-form{
+    width: 60%;
+    margin:auto;
+    flex-direction: column;
+}
 
+#submit-crypto{
+    width: 60%;
+    margin: auto;
+}
+
+.form-control{
+    margin-bottom: 15px;
+}
+
+/* The list of exchanges */
 #exchange-names-article{
     background-color: white;
     border-radius: 3px;
@@ -19,18 +35,12 @@ body{
     width:100%;
 }
 
-
-
-
-
-
 #exchange-names-article a,
 #exchange-names-article p,
 .learning-reasources a,
 .my-media a{
     text-decoration: none;
 }
-
 
 .paragraph-exchange{
     margin: 0 auto;
@@ -47,25 +57,7 @@ body{
     transform: scale(1.1);
 }
 
-/* The main section */
-.intro-data-section{
-    margin-top: 280px;
-    padding-bottom: 460px;
-    text-align: center;
-    
-} */
-
-/*  */
-.ip-section{
-   margin-top: 100px; 
-   margin-left: 30px;
-}
-
-.ip-paragraph{
-    width:100%;
-    display: inline-block;
-}
-
+/* The Chart */
 .charts-section{
     background-image: url('../images/background3.jpg');
     background-position: center;
@@ -75,29 +67,8 @@ body{
     box-shadow: 0px -2px 20px  rgb(167, 167, 167);
 }
 
-
-
-#crypto-form{
-    width: 80%;
-    margin:auto;
-    flex-direction: column;
-}
-
-#submit-crypto{
-    width: 60%;
-    margin: auto;
-}
-
-.form-control{
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-
+/* The images in the carousel */
 .proj-image{
-    /* box-shadow: inset 10px 10px 10px #c01010; */
-    /* filter: ; */
-    /* filter: grayscale(100%)  */
     filter: blur(3px); 
     height: 250px;
 }
@@ -107,6 +78,23 @@ body{
     box-shadow: 15px 15px 135px rgb(143, 143, 143);
 }
 
+/* Footer */
+footer{
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: 80vh 70vh 70vh;
+    grid-template-areas: "form "
+                         "social"
+                         "resources";
+    font-family:'Comic Sans', cursive;
+    box-shadow: 5px 5px 15px rgb(201, 201, 201);
+    margin-bottom: -50px;
+    margin-top: 200px;
+    border-top: 1px solid rgba(14, 14, 14, .2);
+    padding-bottom: 20px;
+}
+
+/* The form in the footer */
 .contact-me{
     margin-left: 20px;
     margin-top: 15px;
@@ -130,23 +118,6 @@ body{
     height: 170px;
     margin-bottom: 15px;
 }
-
-
-footer{
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: 80vh, 70vh, 70vh;
-    grid-template-areas: "form "
-                         "social"
-                         "resources";
-    font-family:'Comic Sans', cursive;
-    box-shadow: 5px 5px 15px rgb(201, 201, 201);
-    margin-bottom: -50px;
-    margin-top: 200px;
-    border-top: 1px solid rgba(14, 14, 14, .2);
-    padding-bottom: 20px;
-}
-
 
 #legend-of-contact{
     margin-top: -16px;
@@ -179,6 +150,7 @@ input[type="submit"]{
     
 }
 
+/* the learning reasources square */
 .learning-reasources{
     background-image:radial-gradient(circle, palegreen, yellowgreen);
     margin-top: 15px;
@@ -191,7 +163,7 @@ input[type="submit"]{
     
 }
 
-
+/* the social media square */
 .my-media{
     background-image:radial-gradient(circle, lightblue, deepskyblue);
     grid-area: social;
@@ -205,6 +177,7 @@ input[type="submit"]{
 }
 
 
+/* The heading of each square */
 .footer-heading{
     background-color: white;
     border-right: solid 2px black;
@@ -223,4 +196,189 @@ input[type="submit"]{
 .learning-reasources a:hover,
 .my-media a:hover {
     cursor: pointer;
+}
+
+#the-chrt-place{
+    max-height: 300px;
+    min-height: 250px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+
+
+.content-me-flex{
+  display: flex;
+  flex-direction: column-reverse;  
+}
+
+
+.text-me-profile{
+    width: 80%;
+    margin-top: 20px;
+}
+
+.intro-half-image{
+    width: 100%;
+    
+}
+
+.the-half-image{
+    height: 400px;
+    width: 100%;
+    border-radius: 0 150px 150px 0;
+}
+
+#list-tech{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    grid-row-gap: 20px;
+    grid-column-gap: 12px;
+    padding: 0;
+    
+}
+
+.html-image{
+    height: 95%;
+    margin-top: -7px;
+}
+
+.tech-image{
+    width:100%;
+}
+
+.my-self-intro{
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+@keyframes offset {
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.name-logo{
+    stroke: rgb(133, 120, 5);
+    stroke-width: 1;
+    stroke-dashoffset: 120;
+    stroke-dasharray: 120;
+    animation: offset 3s linear forwards;
+    font-size: 1.5rem;
+    margin-left: -40px;
+    
+
+}
+
+
+@media (min-width: 375px){
+    .name-logo{
+        margin-left: 0;
+    }
+}
+
+
+@media (min-width: 425px){
+    .name-logo{
+        margin-left: 5%;
+    }
+}
+
+@media (min-width: 768px){
+    .name-logo{
+        margin-left: 25%;
+    }
+
+    .the-half-image{
+        height: 600px;
+    }
+
+    .name-logo{
+        margin-left: 25%;
+    }
+
+    #crypto-form{
+        flex-direction: row;
+    }
+
+    .form-control{
+        margin:  0;
+    }
+
+    #submit-crypto{
+        width:20%;
+        
+    }
+
+    #the-chrt-place{
+        max-height: 500px;
+    }  
+
+    .proj-image{
+        height: 450px;
+    }
+
+
+    .content-me-flex{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .intro-half-image{
+        width: 50%;    
+    }
+
+    .text-me-profile{
+        width: 40%;
+    }
+
+    .the-half-image{
+        height: 600px;
+    }
+
+
+    footer{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        grid-template-areas: "form resources"
+                             "form social"
+                             ;
+        font-family:'Comic Sans', cursive;
+        box-shadow: 5px 5px 15px rgb(201, 201, 201);
+        margin-bottom: -50px;
+        margin-top: 200px;
+        border-top: 1px solid rgba(14, 14, 14, .2);
+        padding-bottom: 20px;
+    }
+
+}
+
+
+@media (min-width: 1024px){
+    .name-logo{
+        margin-left: 30%;
+    }
+
+    .proj-image{
+        height: 650px;
+    }
+
+    .name-logo{
+        margin-left: 35%;
+    }
+}
+
+
+@media (min-width: 1600px){
+    .name-logo{
+        margin-left: 40%;
+    }
+
+    .the-half-image{
+        height: 800px;
+    }
+
 }

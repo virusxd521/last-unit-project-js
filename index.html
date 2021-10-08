@@ -21,11 +21,15 @@
 </head>
 <body class="bg-light bg-gradient">
   <header>
-    <div class="d-flex flex-column  charts-section pt-5">
-      <h3 class="mx-auto">Crypto currency section</h3>
+    <div class="d-flex flex-column charts-section pt-5">
+      <svg class="name-logo">
+        <text fill="#ffffff" font-family="Verdana" x="60" y="60">
+          Crypto currency section
+        </text>  
+      </svg>
       <p class="mx-auto text-center">Search for a coin from the top 100'th crypto coins to see the all time high price V.S the current price of that coin</p>
       <div class="container">
-        <form autocomplete="off" type="text" class="d-flex" id="crypto-form">
+        <form autocomplete="off" class="d-flex" id="crypto-form">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-warning" id="submit-crypto" type="submit">Search</button>
         </form>
@@ -41,88 +45,110 @@
           <div id="exchange-names-article">
           </div>
         </div>
-        <div class="col-sm-8 col-md-7 mt-5" id="the-chrt-place">
-          <canvas height="200px" width="400" id="myChart"></canvas>
+        <div class="col-md-6 mt-5" id="the-chrt-place">
+          <canvas  id="myChart"></canvas>
+        </div>
+        </div>
+    </div>
+    <section class="mt-5 mb-5 d-flex flex-column my-self-intro">
+      <h3 class="mx-auto text-dark">Introduction</h3>
+      <div class="mt-5 content-me-flex">
+        <div class="d-flex flex-column mx-auto text-me-profile">
+          <p>My name is Daniel, I'm a junior Frontend developer and Tech explorer, i am interested in technology and in blockchain in particular.</p>
+          <p>I'm learning mostly Frontend technologies and prevalent Frontend libraries.</p>
+          <p>My main goal is to become a full stack and understand both the front and back to the point where i can build an entire commercial Apps.</p>
+          <p><u>My current tech-stack includes:</u></p>
+          <ul id="list-tech"> 
+            <li><img src="./images/html.png" class="tech-image html-image" alt="html-icon-image"></li>
+            <li><img src="./images/css.jfif" class="tech-image" alt="css-icon-image"></li>
+            <li><img src="./images/javascript.png" class="tech-image" alt="javascript-icon-image"></li>
+            <li><img src="./images/reactjs.png" class="tech-image" alt="react-icon-image"></li>
+          </ul>
+
+        </div>
+        <div class="intro-half-image">
+          <img src="./images/only-me.jpeg" class="the-half-image" alt="...">
         </div>
       </div>
-    </div>
+    </section>
     <section class="mt-5 mb-5 d-flex flex-column">
       <h3 class="mx-auto">Projects gallery</h3>
+      <p class="mx-auto text-center col-10">The gallery represents several of the Frontend projects i've created/built</p>
       <p class="mx-auto text-center col-10">The images are clickable and will lead you the the relevant project</p>
-      <div id="carouselExampleCaptions" class="carousel slide carousel-images mx-auto mt-5" data-bs-ride="carousel">
+      <div id="carouselExampleCaptions" class="carousel slide carousel-images mx-auto mt-5 " data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active bg-secondary" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="bg-secondary" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="bg-secondary" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="bg-secondary" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" class="bg-secondary" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" class="bg-secondary" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" class="bg-secondary" aria-label="Slide 7"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./images/onlineForm.png" class="d-block w-100 proj-image" alt="...">
+            <a href="https://virusxd521.github.io/online_registration_v4/">
+              <img src="./images/onlineForm.png" class="d-block w-100 proj-image" alt="online-form">
+            </a>
             <div class="carousel-caption d-none d-md-block text-dark fw-bolder fs-3">
-              <p>First slide label</p>
-              <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./images/sassProject.png" class="d-block w-100 proj-image" alt="...">
+            <a href="https://virusxd521.github.io/Unit-4-Sass-Project/">
+              <img src="./images/sassProject.png" class="d-block w-100 proj-image" alt="sass-project">
+            </a>
             <div class="carousel-caption d-none d-md-block text-dark fw-bolder fs-3">
-              <p>First slide label</p>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="./images/react-app.png" class="d-block w-100 proj-image" alt="...">
-            <div class="carousel-caption d-none d-md-block text-dark fw-bolder fs-3">
-              <p>First slide label</p>
-              <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
 
           <div class="carousel-item">
-            <img src="./images/wheelSuccess.png" class="d-block w-100 proj-image" alt="...">
+            <a href="https://ipt-racker-raq072rff-teamtreack.vercel.app/">
+              <img src="./images/react-app.png" class="d-block w-100 proj-image" alt="ip-tracker-app">
+            </a>
             <div class="carousel-caption d-none d-md-block text-dark fw-bolder fs-3">
-              <p>First slide label</p>
-              <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
 
           <div class="carousel-item">
-            <img src="./images/secondProject.png" class="d-block w-100 proj-image" alt="...">
+            <a href="https://wheel-of-success-dchxlqwai-todofrontendmentoe.vercel.app/">
+              <img src="./images/wheelSuccess.png" class="d-block w-100 proj-image" alt="wheel-of-success">
+            </a>
             <div class="carousel-caption d-none d-md-block text-dark fw-bolder fs-3">
-              <p>First slide label</p>
-              <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
 
           <div class="carousel-item">
-            <img src="./images/todo-app.png" class="d-block w-100 proj-image" alt="...">
+            <a href="https://virusxd521.github.io/Treehouse-SecondUnit/">
+              <img src="./images/secondProject.png" class="d-block w-100 proj-image" alt="learning-unir">
+            </a>
             <div class="carousel-caption d-none d-md-block text-dark fw-bolder fs-3">
-              <p>Second slide label</p>
-              <p>Some representative placeholder content for the second slide.</p>
             </div>
           </div>
 
           <div class="carousel-item">
-            <img src="./images/calculator-app.png" class="d-block w-100 proj-image" alt="...">
+            <a href="https://to-do-app-8lxbsenpx-todofrontendmentoe.vercel.app/">
+              <img src="./images/todo-app.png" class="d-block w-100 proj-image" alt="todo-app">
+            </a>  
             <div class="carousel-caption d-none d-md-block text-dark fw-bolder fs-3">
-              <p>Third slide label</p>
-              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <a href="https://virusxd521.github.io/Tip-Calculator/">
+              <img src="./images/calculator-app.png" class="d-block w-100 proj-image" alt="tip-calculator">
+            </a>
+            <div class="carousel-caption d-none d-md-block text-dark fw-bolder fs-3">
             </div>
           </div>
         </div>
 
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
